@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="235.92513mm"
+   height="85.783035mm"
+   viewBox="0 0 235.92512 85.783034"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="jupyterlite.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.90784202"
+     inkscape:cx="428.48865"
+     inkscape:cy="51.220365"
+     inkscape:window-width="1728"
+     inkscape:window-height="976"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:clip-to-page="false" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(27.310535,-86.914658)">
+    <rect
+       style="fill:#80b3ff;fill-opacity:0.5;stroke-width:0.201986"
+       id="rect11"
+       width="196.0354"
+       height="40.043846"
+       x="12.579186"
+       y="86.914658"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="34.948933"
+       y="108.16558"
+       id="text4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="34.948933"
+         y="108.16558"
+         id="tspan4">Browser</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="-20.447901"
+       y="107.45243"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="-20.447901"
+         y="107.45243"
+         id="tspan1">User</tspan></text>
+    <path
+       style="fill:#4d4d4d;fill-opacity:0.5;stroke:#4d4d4d;stroke-width:1.39916;stroke-dasharray:none;marker-start:url(#marker8);marker-end:url(#marker9)"
+       d="M -6.1196966,105.73876 H 7.5912124"
+       id="path2" />
+    <path
+       style="fill:#4d4d4d;fill-opacity:0.5;stroke:#4d4d4d;stroke-width:1.399;stroke-dasharray:none;marker-start:url(#marker8)"
+       d="m 102.2295,132.0391 v 19.8312"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#80b3ff;fill-opacity:1;stroke-width:0.201986"
+       id="rect3"
+       width="59.057636"
+       height="21.683002"
+       x="54.610725"
+       y="95.949356"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="84.00296"
+       y="108.66634"
+       id="text7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="84.00296"
+         y="108.66634"
+         id="tspan7">Jupyter Server</tspan></text>
+    <rect
+       style="fill:#80b3ff;fill-opacity:1;stroke-width:0.201986"
+       id="rect1"
+       width="59.057636"
+       height="21.683002"
+       x="74.490509"
+       y="151.01469"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="104.46561"
+       y="163.42406"
+       id="text2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="104.46561"
+         y="163.42406"
+         id="tspan2">Web Server</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="85.466949"
+       y="137.72766"
+       id="text10"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="85.466949"
+         y="137.72766"
+         id="tspan12">static</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="85.466957"
+       y="144.9072"
+       id="text13"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="85.466957"
+         y="144.9072"
+         id="tspan13">content</tspan></text>
+    <rect
+       style="fill:#80b3ff;fill-opacity:1;stroke-width:0.201986"
+       id="rect2"
+       width="59.057636"
+       height="21.683002"
+       x="136.63144"
+       y="95.949356"
+       ry="9.7002878" />
+    <path
+       style="fill:#4d4d4d;fill-opacity:0.5;stroke:#4d4d4d;stroke-width:1.39916;stroke-dasharray:none;marker-start:url(#marker8);marker-end:url(#marker9)"
+       d="m 118.23478,106.26793 h 13.711"
+       id="path4" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="166.02365"
+       y="108.66634"
+       id="text3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="166.02365"
+         y="108.66634"
+         id="tspan3">Kernel</tspan></text>
+  </g>
+</svg>

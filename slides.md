@@ -94,7 +94,7 @@ France, Austria, Germany, India, Spain, UK
 
 ## JupyterLab
 
-diagram 1
+![centre](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/jupyterlab.svg)
 
 ---
 
@@ -102,13 +102,15 @@ diagram 1
 
 ## JupyterLite
 
-diagram 2
+![centre](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/jupyterlite.svg)
 
 ---
 
 # Comparison of JupyterLab and JupyterLite 3
 
 Why or Benefits
+
+SSG
 
 - much easier to deploy and scale
 
@@ -215,13 +217,13 @@ More in progress ...
 
 # Python kernel design 1
 
-![centre height:500](../images/kernel.svg)
+![centre height:500](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/kernel.svg)
 
 ---
 
 # Python kernel design 2
 
-![centre](../images/pyodide-xeus.svg)
+![centre](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/pyodide-xeus.svg)
 
 ---
 
