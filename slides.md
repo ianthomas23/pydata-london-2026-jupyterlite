@@ -38,7 +38,7 @@ img[alt~="float-right"] {
 
 <hr>
 
-![float-right height:300 qr code for slides](../images/qr.png)
+![float-right height:300 qr code for slides](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/qr.png)
 
 ## Ian Thomas, QuantStack
 
@@ -58,7 +58,7 @@ Open Source developer
 Caerphilly
 
 <div>
-<img height="70" alt="Matplotlib logo" src="../images/matplotlib-logo.svg">
+<img height="70" alt="Matplotlib logo" src="https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/matplotlib-logo.svg">
 <img height="70" alt="Bokeh logo" src="https://raw.githubusercontent.com/bokeh/pm/main/assets/logos/SVG/bokeh-icon.svg">
 <img height="70" alt="ContourPy logo" src="https://raw.githubusercontent.com/contourpy/branding/main/logo/output/contourpy_logo.svg">
 <img height="70" alt="Datashader logo" src="https://raw.githubusercontent.com/holoviz/datashader/main/doc/_static/datashader-logo.png">
@@ -80,6 +80,8 @@ France, Austria, Germany, India, Spain, UK
 </div>
 
 ---
+
+![float-right w:250 JupyterLite logo](https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/icon.svg)
 
 # What is JupyterLite?
 
@@ -112,6 +114,8 @@ Why or Benefits
 
 example of tutorial for the audience......
 
+vs Binder
+
 Capytale link ?
 
 ---
@@ -132,9 +136,9 @@ lorenz example uses widgets and mpl
 # How it works 1
 
 - Frontend (UI in browser) almost the same as JupyterLab
-- Jupyter server also runs in the browser (JavaScript instead of Python)
+- Jupyter server also runs in the browser, is JavaScript instead of Python
     - Create and delete kernels
-    - Communication to and from kernels (Jupyter messaging protocol)
+    - Communication to and from kernels via Jupyter messaging protocol
 - Kernels also run in the browser
     - Each in its own thread (Web Worker)
     - Python kernel is CPython compiled to WebAssembly using Emscripten
@@ -147,14 +151,14 @@ lorenz example uses widgets and mpl
 - Python is an executable that runs on your Operating System
 - CPython is C source code compiled into an executable
     - e.g. using the `clang` toolchain to compile for `macOS ARM`
-- Pass it Python code (text) that it parses, interprets and executes
+- Pass it Python code (human-readable text) that it parses, interprets and executes
 - Use other Python packages:
     - Pure Python packages (`noarch`) are also text
     - Packages containing compiled code (e.g. `numpy`) must be pre-compiled to your architecture
 
 ---
 
-# How it works 2: Python in the browser
+# How it works 3: Python in the browser
 
 - WebAssembly (`wasm`) is a executable format that runs in the browser
     - This is our architecture/platform
@@ -172,7 +176,7 @@ lorenz example uses widgets and mpl
 <div class="columns">
 <div>
 
-- `pyodide` (python)
+- `pyodide` = Python
 - `xeus-python`
 - `xeus-r`
 - `xeus-cpp`
@@ -182,7 +186,7 @@ lorenz example uses widgets and mpl
 </div>
 <div>
 
-- `p5` (javascript)
+- `p5` = JavaScript
 - `xeus-haskell`
 - `xeus-lua`
 - `xeus-ocaml`
@@ -209,18 +213,30 @@ More in progress ...
 
 ---
 
-# Python kernel design
+# Python kernel design 1
 
-diagram
+![centre height:500](../images/kernel.svg)
+
+---
+
+# Python kernel design 2
+
+![centre](../images/pyodide-xeus.svg)
 
 ---
 
 # Python kernel packaging
 
-table of pip vs mamba, emscripten-forge and so on.
-
-just the same as venv/conda env for python on real computers....
-
+- pyodide
+    - `pip`-based packaging
+    - For Python only
+    - Packages served from pyodide-specific site, switching to PyPI
+- xeus-python (and other xeus kernels)
+    - `conda`-based packaging
+    - For everything, not just Python
+    - `noarch` packages from conda-forge
+    - `emscripten-wasm32` packages from Emscripten-forge
+- Same as choice of `pip` or `conda` environments for Python on real hardware
 
 ---
 
@@ -235,21 +251,21 @@ just the same as venv/conda env for python on real computers....
     - `xeus-python` use `!mamba install` from conda-forge or Emscripten-forge
 - Often different versions of packages available
 
-<!--Demo of different versions of scipy available on try-jupyter-->
+<!--Demo switching kernels, and different versions of scipy available on try-jupyter-->
 
 ---
 
-- Emscripten-forge package building
+![float-right w:200 Emscripten-forge logo](https://raw.githubusercontent.com/emscripten-forge/recipes/main/docs/assets/icon_none_color.svg)
 
-    - like conda-forge for emscripten-wasm platform
-    - mamba/micromamba
+# Emscripten-forge packages
 
-
-<div class="center">
-<img width="10%" src="https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/icon.svg">
-<img width="20%" src="https://raw.githubusercontent.com/jupyter-xeus/xeus/main/docs/source/xeus.svg">
-<img width="30%" src="https://raw.githubusercontent.com/mamba-org/mamba/main/docs/assets/mamba_header.png">
-</div>
+- xeus-based wasm packages are built on Emscripten-forge
+    - conda-forge does not support `emscripten-wasm32` platform
+    - Emscripten-forge is conda-forge for WebAssembly
+- Install such packages using `mamba` or `pixi`
+    - `conda` does not support `emscripten-wasm32` plaform
+- Recipes at https://github.com/emscripten-forge/recipes
+- Served from `prefix.dev` channel https://prefix.dev/channels/emscripten-forge-4x
 
 ---
 
@@ -315,11 +331,15 @@ show mistral ai key, demo code generation, explain fully sandboxed
 
 ---
 
-- Making it easier to deploy and share using notebook.link
+# Making it easier to deploy and share using notebook.link
 
-    - deployment is trivial, almost single-click
-    - your files stored so that they can be used from multiple machines
-    - sharing of notebooks with anyone
+![float-right w:250 Hero astronaut image](https://raw.githubusercontent.com/notebook-link/notebook.link//main/assets/hero-astro.svg)
+
+- deployment is trivial, almost single-click
+- your files stored so that they can be used from multiple machines
+- sharing of notebooks with anyone
+
+https://notebook.link/
 
 ---
 
@@ -330,3 +350,7 @@ show mistral ai key, demo code generation, explain fully sandboxed
 - Hybrid JupyterLab/JupyterLite supporting local (JupyterLite in browser) and remote (JupyterLab) kernels
 - More kernel languages, including compiled languages
 - Missing Emscripten-forge packages
+
+---
+
+# Summary/conclusions

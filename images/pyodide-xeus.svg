@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="329.0401mm"
+   height="117.82997mm"
+   viewBox="0 0 329.04011 117.82997"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="pyodide-xeus.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3115105"
+     inkscape:cx="607.31501"
+     inkscape:cy="154.40212"
+     inkscape:window-width="2560"
+     inkscape:window-height="1302"
+     inkscape:window-x="1728"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:clip-to-page="false" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1.5"
+       markerHeight="1.5"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker18"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Colored triangle"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path18" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-63.596844,-58.592289)">
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#4d4d4d;stroke-width:2;stroke-dasharray:none;marker-start:url(#marker18)"
+       d="M 281.25266,99.203393 V 132.69319"
+       id="path7" />
+    <rect
+       style="fill:#80b3ff;fill-opacity:0.5;stroke-width:0.13403;stroke-dasharray:none"
+       id="rect1"
+       width="73.03746"
+       height="43.936592"
+       x="63.596844"
+       y="132.45384"
+       ry="0" />
+    <rect
+       style="fill:#80b3ff;stroke-width:0.201986"
+       id="rect4"
+       width="59.057636"
+       height="21.683002"
+       x="70.729393"
+       y="148.43076"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="100.76074"
+       y="156.75626"
+       id="text8"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="100.76074"
+         y="156.75626"
+         id="tspan8">pyodide python</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="100.76074"
+         y="165.77295"
+         id="tspan5">interpreter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="100.39184"
+       y="141.11011"
+       id="text9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="100.39184"
+         y="141.11011"
+         id="tspan9">pyodide kernel</tspan></text>
+    <rect
+       style="fill:#80b3ff;fill-opacity:0.5;stroke-width:0.13403;stroke-dasharray:none"
+       id="rect11"
+       width="73.03746"
+       height="43.936592"
+       x="242.28247"
+       y="132.48566"
+       ry="0" />
+    <rect
+       style="fill:#80b3ff;stroke-width:0.201986"
+       id="rect12"
+       width="59.057636"
+       height="21.683002"
+       x="249.41501"
+       y="148.46257"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="279.04272"
+       y="156.98981"
+       id="text12"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="279.04272"
+         y="156.98981"
+         id="tspan12">python</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="279.04272"
+         y="166.0065"
+         id="tspan7">interpreter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="279.07736"
+       y="141.14192"
+       id="text13"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="279.07736"
+         y="141.14192"
+         id="tspan13">xeus python kernel</tspan></text>
+    <rect
+       style="fill:#80b3ff;fill-opacity:0.5;stroke-width:0.13403;stroke-dasharray:none"
+       id="rect13"
+       width="73.03746"
+       height="43.936592"
+       x="164.96547"
+       y="132.48566"
+       ry="0" />
+    <rect
+       style="fill:#80b3ff;stroke-width:0.201986"
+       id="rect14"
+       width="59.057636"
+       height="21.683002"
+       x="172.09801"
+       y="148.46257"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="202.33096"
+       y="156.98981"
+       id="text14"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="202.33096"
+         y="156.98981"
+         id="tspan14">C++</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="202.33096"
+         y="166.0065"
+         id="tspan6">interpreter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="201.76036"
+       y="141.14192"
+       id="text15"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="201.76036"
+         y="141.14192"
+         id="tspan15">xeus C++ kernel</tspan></text>
+    <rect
+       style="fill:#80b3ff;fill-opacity:0.5;stroke-width:0.13403;stroke-dasharray:none"
+       id="rect15"
+       width="73.03746"
+       height="43.936592"
+       x="319.59949"
+       y="132.48567"
+       ry="0" />
+    <rect
+       style="fill:#80b3ff;stroke-width:0.201986"
+       id="rect16"
+       width="59.057636"
+       height="21.683002"
+       x="326.73203"
+       y="148.46259"
+       ry="9.7002878" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="357.36844"
+       y="156.78809"
+       id="text16"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="357.36844"
+         y="156.78809"
+         id="tspan16">R</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="357.36844"
+         y="165.80478"
+         id="tspan10">interpreter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="356.39438"
+       y="141.14194"
+       id="text17"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="356.39438"
+         y="141.14194"
+         id="tspan17">xeus R kernel</tspan></text>
+    <rect
+       style="fill:#80b3ff;fill-opacity:0.5;stroke-width:0.10333;stroke-dasharray:none"
+       id="rect17"
+       width="57.631119"
+       height="33.095093"
+       x="251.69746"
+       y="58.592289"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;fill:#000000;stroke-width:0.264583"
+       x="279.93329"
+       y="76.948837"
+       id="text18"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="279.93329"
+         y="76.948837"
+         id="tspan18">xeus</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#4d4d4d;stroke-width:2;stroke-dasharray:none"
+       d="m 201.33348,132.86725 v -14.74706 l 151.41782,-0.62752 v 15.0608"
+       id="path19" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="140.52504"
+       y="114.54311"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="140.52504"
+         y="114.54311"
+         id="tspan1">bespoke kernel wrapper</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;fill:#000000;stroke-width:0.264583"
+       x="181.50774"
+       y="80.866158"
+       id="text2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="181.50774"
+         y="80.866158"
+         id="tspan2">C++ base class implementing</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="181.50774"
+         y="89.882858"
+         id="tspan3">kernel protocol in generic way</tspan></text>
+    <path
+       style="opacity:1;fill:#2b0000;stroke:#808080;stroke-width:2;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="M 229.22488,82.801017 246.57447,78.56449"
+       id="path10" />
+    <path
+       style="opacity:1;fill:#2b0000;stroke:#808080;stroke-width:2;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="m 144.45651,116.35386 -11.77459,13.42815"
+       id="path11" />
+  </g>
+</svg>
