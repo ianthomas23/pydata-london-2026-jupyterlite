@@ -1,0 +1,16 @@
+{
+  "name": "pydata-london-2026-jupyterlite",
+  "version": "1.0.0",
+  "description": "PyData London 2026 - JupyterLite: run all your code in a web browser using WebAssembly",
+  "main": "index.js",
+  "scripts": {
+    "html": "marp slides.md -o output/index.html",
+    "pdf": "marp slides.md -o jupyterlite.pdf --allow-local-files"
+  },
+  "keywords": [],
+  "author": "Ian Thomas",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.4.0"
+  }
+}
