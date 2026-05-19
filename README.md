@@ -3,6 +3,8 @@
 - PyData London 2026
 - 2026-06-06 11:50
 
+Deployed to github pages at https://ianthomas23.github.io/pydata-london-2026-jupyterlite/
+
 ## Build locally
 
 You need to have `node.js` installed.
