@@ -2,3 +2,8 @@ jupyterlite.pdf
 node_modules/
 output/
 package-lock.json
+
+.jupyterlite.doit.db
+_output/
+cockle-config.json
+cockle_wasm_env/

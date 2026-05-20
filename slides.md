@@ -294,9 +294,10 @@ good
     - education - students start of with copies of files, modify them locally
     - keeping data secure - health data, finance
 bad at
-    - single version of python/whatever at a time
     - cannot do multithreading
     - large datasets
+    - share your modified files
+    - single version of python/whatever at a time
 
 ---
 
@@ -305,6 +306,8 @@ bad at
 ![float-right w:250 JupyterLite terminal logo](https://raw.githubusercontent.com/jupyterlite/terminal/main/docs/_static/terminal_logo.svg)
 
 Logo
+
+mention cockle and em-forge packages for commands
 
 ---
 
@@ -323,13 +326,123 @@ show mistral ai key, demo code generation, explain fully sandboxed
 
 ---
 
-- Deployment, including live demo
+# Create a JupyterLite deployment 1
 
-    - simple local deployment
-        - show some of directory structure
-    - more complicated local deployment
-    - show where docs are, sections on configuring and so on.
-    - github pages
+- Deployment is just a static web site
+- Deploy locally or to GitHub Pages, Read the Docs, Vercel, etc
+- Official docs
+    - https://jupyterlite.readthedocs.io/en/stable/howto/index.html
+- Example deployments
+    - In many https://github.com/jupyterlite repos
+    - https://github.com/jupyter/try-jupyter
+
+---
+
+# Create a JupyterLite deployment 2
+
+- Questions
+    - What packages (kernels, terminal, extensions) do you want?
+    - What pre-installed xeus kernel packages do you want?
+    - What content (notebooks, data files) do you want?
+- Process
+    - Build the static site using `jupyter lite build`
+    - Serve it
+
+---
+
+# Local deployment with both Python kernels
+
+<div class="columns">
+<div>
+
+`build-environment.yml`:
+```yml
+name: build-env1
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlite-core
+  - jupyterlite-pyodide-kernel
+  - jupyterlite-xeus
+```
+
+</div>
+<div>
+
+`environment.yml`:
+```yml
+name: temp
+channels:
+  - https://repo.prefix.dev/emscripten-forge-4x
+  - conda-forge
+dependencies:
+  - xeus-python
+  - matplotlib
+```
+
+</div>
+</div>
+
+Sequence of commands:
+
+```bash
+micromamba create -f build-environment.yml
+micromamba activate build-env1
+jupyter lite build
+python -m http.server -d _output/
+```
+
+---
+
+# Deployment extras 1
+
+- Content (notebooks, data files)
+    - Put in a separate directory e.g. `contents`
+    - Append `--contents contents/` to `jupyter lite build`
+    - `jupyter_server` must be in `build-environment.yml`
+
+- Xeus kernels
+    - Add to `environment.yml`
+    - `jupyterlite-xeus` must be in `build-environment.yml`
+
+- Non-xeus kernels such as `pyodide` and `p5`
+    - Add to `build-environment.yml`
+
+---
+
+# Deployment extras 2
+
+- Preinstalled xeus kernel packages
+    - Add to `environment.yml`
+
+- Extensions such as `jupyterlite-ai`
+    - Add to `build-environment.yml`
+
+- Terminal extension
+    - Add `jupyterlite-terminal` and `nodejs` to `build-environment.yml`
+    - Add `jupyter-lite.json` file to enable terminals
+    - Optional `cockle-config-in.json` for extra commands, env vars, etc
+
+---
+
+# More complicated local deployment
+
+- Kernels = `pyodide`, `p5`, `xeus-cpp`, `xeus-python`
+    - `p5` kernel not on `conda-forge` so install using `pip`
+- Content = notebooks, text files
+- Extensions = terminal, AI, catppuccin theme
+- See `deploy2` directory of this talk's github repository
+- Live demo :rocket:
+
+---
+
+# Deploy to github pages
+
+- Demo repository https://github.com/jupyterlite/demo
+- Docs https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html
+- Use the demo repo as a template to create your own repository
+- Set up GitHub Actions and deploy
+- Follow video and screenshots in the docs site
 
 ---
 
@@ -337,11 +450,12 @@ show mistral ai key, demo code generation, explain fully sandboxed
 
 ![float-right w:250 Hero astronaut image](https://raw.githubusercontent.com/notebook-link/notebook.link//main/assets/hero-astro.svg)
 
-- deployment is trivial, almost single-click
-- your files stored so that they can be used from multiple machines
-- sharing of notebooks with anyone
+https://notebook.link is a web platform built on top of JupyterLite
 
-https://notebook.link/
+- Deployment is trivial, almost single-click
+- Very fast to start a kernel
+- Your files are stored in the cloud so that they can be used from multiple machines
+- Sharing of notebooks with anyone via a link
 
 ---
 

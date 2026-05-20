@@ -1,0 +1,14 @@
+name: build-env2
+channels:
+  - conda-forge
+dependencies:
+  - catppuccin-jupyterlab
+  - jupyter_server
+  - jupyterlite-ai
+  - jupyterlite-core
+  - jupyterlite-pyodide-kernel
+  - jupyterlite-terminal
+  - jupyterlite-xeus
+  - nodejs
+  - pip:
+    - jupyterlite-p5-kernel
