@@ -291,24 +291,16 @@ More in progress ...
 
 ---
 
-# More interesting demos
+# Other interesting demos
 
 - Installing packages on the fly
     - `mamba` for xeus kernels, `pip` for pyodide kernel
 - Compiled languages such as C++
     - Compiler toolchain is compiled to WebAssembly
-
-
 - JupyterCAD
     - https://jupytercad.github.io/JupyterCAD/lab/index.html
 - JupyterGIS
     - https://jupytergis.readthedocs.io/en/latest/lite/lab/
-
-- voici
-
-^^ these are extensions so maybe put them later.......
-Maybe an "other useful extensions page" which is these 3 demos?
-then what to do with this page then???????  maybe Key features 2.....
 
 ---
 
@@ -349,19 +341,27 @@ then what to do with this page then???????  maybe Key features 2.....
 
 # Useful extension: Jupyterlite AI
 
-show mistral ai key, demo code generation, explain fully sandboxed
+- Try it out at https://jupyterlite.github.io/ai/lab/index.html
+- Set up a provider using API key
+- [Video walkthrough](https://github.com/user-attachments/assets/e33d7d84-53ca-4835-a034-b6757476c98b) showing agent creating and running notebook
+- Sandboxed
+    - API key stored in your browser
+    - Can only access browser storage for the session
+    - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
 
 ---
 
 # Useful extension: jupyterlite-sphinx
 
-
-- Use in project documentation using jupyterlite-sphinx
-
-    - jupyterlite sphinx in project docs
-    - repl similar
-        - ? embed repl example (see https://jtp.io/jupytercon-2023-jupyterlite/files/index.html#14)
-    - voici ?
+- Embed JupyterLite into your `sphinx` project documentation
+- jupyterlite-sphinx
+    - https://jupyterlite-sphinx.readthedocs.io/
+- ipyleaflet
+    - https://ipyleaflet.readthedocs.io/
+- numpy
+    - https://numpy.org/
+- sympy
+    - https://live.sympy.org/
 
 ---
 
