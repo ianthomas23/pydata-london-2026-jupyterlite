@@ -120,6 +120,11 @@ vs Binder
 
 Capytale link ?
 
+
+- Easy to deploy
+- Scales well
+
+
 ---
 
 # Live demonstration of basic functionality
@@ -249,8 +254,9 @@ More in progress ...
 - `pyodide`: usually rely on pyodide distribution for curated choice of packages
 - `xeus-python`: usually choose packages and versions at deployment time
 - Install new packages at runtime:
-    - `pyodide` use `!pip install` from PyPi
-    - `xeus-python` use `!mamba install` from conda-forge or Emscripten-forge
+    - `pyodide` use `%pip install` from PyPi
+    - `xeus-python` use `mamba install` from conda-forge or Emscripten-forge
+        - Older versions use `%mamba` or `!mamba` instead
 - Often different versions of packages available
 
 <!--Demo switching kernels, and different versions of scipy available on try-jupyter-->
@@ -271,51 +277,84 @@ More in progress ...
 
 ---
 
-- Key features such as shared in-browser filesystem
+# Key features
 
-    - static website
-    - filesystem shared between kernels, in-browser (by default)
-
----
-
-- More detailed demos such as installing packages on the fly
-
-    - installing packages on the fly (pip, mamba, etc)
-    - C++ compiling on the fly, so the compiler toolchain `llvm` compiled to WebAssembly
-
-    - maybe jupytergis demo ?
+- Static web site
+    - Easy to deploy
+    - Scales well
+- Browser local storage
+    - Shared between the different kernels
+    - Changes only visible to you
+    - When you return to the same site using the same browser you see your changes
+    - Files that are served in the deployment can be modified and saved locally
+        - If deleted, revert to the served files
 
 ---
 
-- What it is good and bad at
+# More interesting demos
 
-good
-    - trying things out (without creating a venv, installing packages)
-    - education - students start of with copies of files, modify them locally
-    - keeping data secure - health data, finance
-bad at
-    - cannot do multithreading
-    - large datasets
-    - share your modified files
-    - single version of python/whatever at a time
+- Installing packages on the fly
+    - `mamba` for xeus kernels, `pip` for pyodide kernel
+- Compiled languages such as C++
+    - Compiler toolchain is compiled to WebAssembly
+
+
+- JupyterCAD
+    - https://jupytercad.github.io/JupyterCAD/lab/index.html
+- JupyterGIS
+    - https://jupytergis.readthedocs.io/en/latest/lite/lab/
+
+- voici
+
+^^ these are extensions so maybe put them later.......
+Maybe an "other useful extensions page" which is these 3 demos?
+then what to do with this page then???????  maybe Key features 2.....
 
 ---
 
-- Terminal for vim, git, etc
+# What is JupyterLite good at? :heart:
+
+- Trying things out
+    - Without installing an environment/packages
+- Education
+    - Students start with copy of initial files and modify them locally
+- Keeping data secure in the browser
+    - Health data, finance
+
+---
+
+# What is JupyterLite bad at? :broken_heart:
+
+- Does not support multithreading or multiprocessing
+- Large datasets
+    - Data stored in the browser
+- Sharing modified files
+- Kernels only support a single version of programming language at a time
+
+---
+
+# Useful extensions: terminal
 
 ![float-right w:250 JupyterLite terminal logo](https://raw.githubusercontent.com/jupyterlite/terminal/main/docs/_static/terminal_logo.svg)
 
-Logo
-
-mention cockle and em-forge packages for commands
+- JupyterLite extension for terminal that runs in the browser
+- Connected to the `/drive` that is shared with kernels
+- Commands compiled to WebAssembly using Emscripten-forge
+- Example commands: `ls`, `echo`, `uname`, `vim`, `nano`, `git`
+- Demo https://jupyter.org/try-jupyter/lab/ :rocket:
+- Note `git clone` of remote repo is possible but requires a CORS proxy
+    - See https://git2cpp.readthedocs.io/ for more details
 
 ---
 
-- Jupyterlite AI
+# Useful extension: Jupyterlite AI
 
 show mistral ai key, demo code generation, explain fully sandboxed
 
 ---
+
+# Useful extension: jupyterlite-sphinx
+
 
 - Use in project documentation using jupyterlite-sphinx
 
@@ -373,7 +412,7 @@ dependencies:
 ```yml
 name: temp
 channels:
-  - https://repo.prefix.dev/emscripten-forge-4x
+  - https://prefix.dev/emscripten-forge-4x
   - conda-forge
 dependencies:
   - xeus-python
@@ -412,7 +451,7 @@ python -m http.server -d _output/
 
 # Deployment extras 2
 
-- Preinstalled xeus kernel packages
+- Preinstall xeus kernel packages
     - Add to `environment.yml`
 
 - Extensions such as `jupyterlite-ai`
@@ -429,8 +468,8 @@ python -m http.server -d _output/
 
 - Kernels = `pyodide`, `p5`, `xeus-cpp`, `xeus-python`
     - `p5` kernel not on `conda-forge` so install using `pip`
-- Content = notebooks, text files
-- Extensions = terminal, AI, catppuccin theme
+- Content = notebook, text file
+- Extensions = terminal, catppuccin theme
 - See `deploy2` directory of this talk's github repository
 - Live demo :rocket:
 

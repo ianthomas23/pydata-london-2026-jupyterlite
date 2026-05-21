@@ -2,13 +2,12 @@ name: build-env2
 channels:
   - conda-forge
 dependencies:
-  - catppuccin-jupyterlab
-  - jupyter_server
-  - jupyterlite-ai
+  - catppuccin-jupyterlab  # Theme extension
+  - jupyter_server  # Needed for content
   - jupyterlite-core
   - jupyterlite-pyodide-kernel
   - jupyterlite-terminal
   - jupyterlite-xeus
-  - nodejs
+  - nodejs  # Needed for terminal extension
   - pip:
-    - jupyterlite-p5-kernel
+    - jupyterlite-p5-kernel  # Not available on conda-forge
