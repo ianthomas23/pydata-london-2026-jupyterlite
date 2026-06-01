@@ -22,6 +22,18 @@ jobs:
           npm install
           npm run html
 
+      - name: Deployment 2 install mamba
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: deploy2/build-environment.yml
+          cache-environment: true
+
+      - name: Deployment 2 Build the JupyterLite site
+        shell: bash -l {0}
+        working-directory: deploy2
+        run: |
+          jupyter lite build --contents contents --output-dir ../output/deploy2
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
