@@ -106,24 +106,14 @@ France, Austria, Germany, India, Spain, UK
 
 ---
 
-# Comparison of JupyterLab and JupyterLite 3
+# Why JupyterLite vs JupyterLab?
 
-Why or Benefits
-
-SSG
-
-- much easier to deploy and scale
-
-example of tutorial for the audience......
-
-vs Binder
-
-Capytale link ?
-
-
-- Easy to deploy
-- Scales well
-
+- Static web site
+    - Easy to deploy
+    - Scales well
+- Example of tutorial for the audience
+- [Capytale project](https://thenewstack.io/teaching-a-billion-people-to-code-how-jupyterlite-is-scaling-the-impossible/)
+    - 500,000 French high school students on single server
 
 ---
 
@@ -149,7 +139,6 @@ lorenz example uses widgets and mpl
 - Kernels also run in the browser
     - Each in its own thread (Web Worker)
     - Python kernel is CPython compiled to WebAssembly using Emscripten
-
 
 ---
 
@@ -234,16 +223,14 @@ More in progress ...
 
 # Python kernel packaging
 
-- pyodide
-    - `pip`-based packaging
-    - For Python only
-    - Packages served from pyodide-specific site, switching to PyPI
-- xeus-python (and other xeus kernels)
-    - `conda`-based packaging
-    - For everything, not just Python
-    - `noarch` packages from conda-forge
-    - `emscripten-wasm32` packages from Emscripten-forge
-- Same as choice of `pip` or `conda` environments for Python on real hardware
+&nbsp; | pyodide | xeus
+--- | ---- | ---- |
+Packaging tool | `pip`-based | `conda`-based
+Languages | Python only | All languages
+`noarch` platform | PyPI | Conda-forge
+`emscripten-wasm32` platform | pyodide now, PyPI soon | Emscripten-forge
+
+* Same as choice of `pip` or `conda` environments for Python on real hardware
 
 ---
 
@@ -268,7 +255,7 @@ More in progress ...
 # Emscripten-forge packages
 
 - xeus-based wasm packages are built on Emscripten-forge
-    - conda-forge does not support `emscripten-wasm32` platform
+    - Conda-forge does not support `emscripten-wasm32` platform
     - Emscripten-forge is conda-forge for WebAssembly
 - Install such packages using `mamba` or `pixi`
     - `conda` does not support `emscripten-wasm32` plaform
@@ -322,6 +309,7 @@ More in progress ...
     - Data stored in the browser
 - Sharing modified files
 - Kernels only support a single version of programming language at a time
+- Remote access limited by [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) (CORS)
 
 ---
 
@@ -348,6 +336,7 @@ More in progress ...
     - API key stored in your browser
     - Can only access browser storage for the session
     - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
+- Project name change
 
 ---
 
@@ -472,6 +461,8 @@ python -m http.server -d _output/
 - Extensions = terminal, catppuccin theme
 - See `deploy2` directory of this talk's github repository
 - Live demo :rocket:
+- On GitHub Pages
+    - https://ianthomas23.github.io/pydata-london-2026-jupyterlite/deploy2
 
 ---
 
