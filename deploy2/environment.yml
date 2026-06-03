@@ -3,7 +3,7 @@ channels:
   - https://prefix.dev/emscripten-forge-4x
   - conda-forge
 dependencies:
-  - xeus-cpp
+  - xeus-octave
   - xeus-python
   - matplotlib
-  - ipympl
+  #- ipympl

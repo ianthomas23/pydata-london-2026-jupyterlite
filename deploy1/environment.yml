@@ -5,4 +5,4 @@ channels:
 dependencies:
   - xeus-python
   - matplotlib
-  - ipympl
+  #- ipympl
