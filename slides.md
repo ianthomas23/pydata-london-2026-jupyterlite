@@ -38,12 +38,15 @@ img[alt~="float-right"] {
 
 <hr>
 
-![float-right height:300 qr code for slides](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/qr.png)
+![float-right height:400 qr code for slides](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/qr.png)
 
 ## Ian Thomas, QuantStack
 
-Github repository:
+Presentation repository:
 https://github.com/ianthomas23/pydata-london-2026-jupyterlite
+
+Live version:
+https://ianthomas23.github.io/pydata-london-2026-jupyterlite/
 
 ---
 
@@ -81,12 +84,37 @@ France, Austria, Germany, India, Spain, UK
 
 ---
 
+![float-right w:450 JupyterLite logo](https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/icon.svg)
+
+# Talk outline
+
+- What is JupyterLite?
+- Various demonstrations
+- How it works
+- What it is good and bad at
+- How to deploy a JupyterLite web site
+- Where it is going
+
+---
+
 ![float-right w:250 JupyterLite logo](https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/icon.svg)
 
 # What is JupyterLite?
 
 - JupyterLite is a JupyterLab distribution that runs entirely in the web browser, backed by in-browser language kernels
 - Like JupyterLab but **everything** runs in your web browser
+
+---
+
+# Live demonstration
+
+- https://jupyter.org/ :arrow_right: Try it in your browser :arrow_right: JupyterLab
+- This is JupyterLite not JupyterLab
+- Intro: running Python code
+- Lorenz: interactive visualisation using `matplotlib` and `ipywidgets`
+- Other kernels: R, C++, Sqlite
+- `platform.machine()` is `wasm32`
+- Shared filesystem
 
 ---
 
@@ -113,20 +141,7 @@ France, Austria, Germany, India, Spain, UK
     - Scales well
 - Example of tutorial for the audience
 - [Capytale project](https://thenewstack.io/teaching-a-billion-people-to-code-how-jupyterlite-is-scaling-the-impossible/)
-    - 500,000 French high school students on single server
-
----
-
-# Live demonstration of basic functionality
-
-https://jupyter.org/
-
-lorenz example uses widgets and mpl
-
-    - try jupyter is actually lite not lab!
-    - list all the different kernels available
-    - run `sys.platform` etc, and some file access to show shared filesystem with file browser
-    - some visualisations e.g. matplotlib, ipywidgets
+    - 500,000 high school students in France on single server
 
 ---
 
@@ -195,7 +210,7 @@ More in progress ...
 
 ---
 
-# There are two Python kernels? :anguished:
+# There are two Python kernels :anguished:
 
 - `pyodide`
     - Used outside of JupyterLite in web apps and web pages, including in PyScript
@@ -204,7 +219,7 @@ More in progress ...
 - `xeus-python`
     - One of the xeus family of kernels, for use in JupyterLite only
 
-- Developed in parallel
+- Developed in parallel by different teams
 - Differ in how they are designed, and how they are packaged
 
 ---
@@ -224,11 +239,11 @@ More in progress ...
 # Python kernel packaging
 
 &nbsp; | pyodide | xeus
---- | ---- | ---- |
-Packaging tool | `pip`-based | `conda`-based
+--- | ---- | ----
 Languages | Python only | All languages
-`noarch` platform | PyPI | Conda-forge
-`emscripten-wasm32` platform | pyodide now, PyPI soon | Emscripten-forge
+Packaging tool | `pip`-based | `conda`-based
+`noarch` packages | PyPI | Conda-forge
+`emscripten-wasm32` packages | pyodide now, PyPI soon | Emscripten-forge
 
 * Same as choice of `pip` or `conda` environments for Python on real hardware
 
@@ -238,13 +253,12 @@ Languages | Python only | All languages
 
 - Mostly you can use either
 - Switch between them easily using JupyterLite UI
-- `pyodide`: usually rely on pyodide distribution for curated choice of packages
-- `xeus-python`: usually choose packages and versions at deployment time
-- Install new packages at runtime:
-    - `pyodide` use `%pip install` from PyPi
-    - `xeus-python` use `mamba install` from conda-forge or Emscripten-forge
-        - Older versions use `%mamba` or `!mamba` instead
 - Often different versions of packages available
+
+&nbsp; | pyodide | xeus
+--- | ---- | ----
+Package choice | Usually use pyodide distribution for curated choice of packages | Usually choose packages and versions at deployment time
+Install packages at runtime | `%pip install` | `mamba install`
 
 <!--Demo switching kernels, and different versions of scipy available on try-jupyter-->
 
@@ -258,13 +272,13 @@ Languages | Python only | All languages
     - Conda-forge does not support `emscripten-wasm32` platform
     - Emscripten-forge is conda-forge for WebAssembly
 - Install such packages using `mamba` or `pixi`
-    - `conda` does not support `emscripten-wasm32` plaform
+    - `conda` does not support `emscripten-wasm32` platform
 - Recipes at https://github.com/emscripten-forge/recipes
 - Served from `prefix.dev` channel https://prefix.dev/channels/emscripten-forge-4x
 
 ---
 
-# Key features
+# Key features of JupyterLite
 
 - Static web site
     - Easy to deploy
@@ -275,26 +289,31 @@ Languages | Python only | All languages
     - When you return to the same site using the same browser you see your changes
     - Files that are served in the deployment can be modified and saved locally
         - If deleted, revert to the served files
+- Real Time Collaboration = work in progress
 
 ---
 
 # Other interesting demos
 
 - Installing packages on the fly
-    - `mamba` for xeus kernels, `pip` for pyodide kernel
+    - `mamba install`, `list`, `remove` for xeus kernels
+    - `%pip install` for pyodide kernel
 - Compiled languages such as C++
     - Compiler toolchain is compiled to WebAssembly
-- JupyterCAD
-    - https://jupytercad.github.io/JupyterCAD/lab/index.html
 - JupyterGIS
     - https://jupytergis.readthedocs.io/en/latest/lite/lab/
+- Voici dashboards
+    - https://voici.readthedocs.io/en/latest/
+
+<!-- install bokeh for xeus, cowsay for pyodide -->
+<!-- Open an existing JGIS project -->
 
 ---
 
 # What is JupyterLite good at? :heart:
 
 - Trying things out
-    - Without installing an environment/packages
+    - Without installing an environment and packages
 - Education
     - Students start with copy of initial files and modify them locally
 - Keeping data secure in the browser
@@ -320,23 +339,24 @@ Languages | Python only | All languages
 - JupyterLite extension for terminal that runs in the browser
 - Connected to the `/drive` that is shared with kernels
 - Commands compiled to WebAssembly using Emscripten-forge
-- Example commands: `ls`, `echo`, `uname`, `vim`, `nano`, `git`
+- Tab to list available commands and aliases
+    - `ls`, `echo`, `uname`, `vim`, `nano`, `git`, etc
 - Demo https://jupyter.org/try-jupyter/lab/ :rocket:
 - Note `git clone` of remote repo is possible but requires a CORS proxy
     - See https://git2cpp.readthedocs.io/ for more details
 
 ---
 
-# Useful extension: Jupyterlite AI
+# Useful extension: Jupyterlite AI :sparkles:
 
 - Try it out at https://jupyterlite.github.io/ai/lab/index.html
 - Set up a provider using API key
 - [Video walkthrough](https://github.com/user-attachments/assets/e33d7d84-53ca-4835-a034-b6757476c98b) showing agent creating and running notebook
+- Other video walkthrough ...
 - Sandboxed
     - API key stored in your browser
-    - Can only access browser storage for the session
     - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
-- Project name change
+- Project name changing
 
 ---
 
@@ -406,6 +426,7 @@ channels:
 dependencies:
   - xeus-python
   - matplotlib
+  - ipympl
 ```
 
 </div>
@@ -426,11 +447,11 @@ python -m http.server -d _output/
 
 - Content (notebooks, data files)
     - Put in a separate directory e.g. `contents`
-    - Append `--contents contents/` to `jupyter lite build`
     - `jupyter_server` must be in `build-environment.yml`
+    - Append `--contents contents/` to `jupyter lite build`
 
 - Xeus kernels
-    - Add to `environment.yml`
+    - Add `xeus-whatever` to `environment.yml`
     - `jupyterlite-xeus` must be in `build-environment.yml`
 
 - Non-xeus kernels such as `pyodide` and `p5`
@@ -449,7 +470,7 @@ python -m http.server -d _output/
 - Terminal extension
     - Add `jupyterlite-terminal` and `nodejs` to `build-environment.yml`
     - Add `jupyter-lite.json` file to enable terminals
-    - Optional `cockle-config-in.json` for extra commands, env vars, etc
+    - Optional `cockle-config-in.json` for extra commands, etc
 
 ---
 
@@ -478,9 +499,9 @@ python -m http.server -d _output/
 
 # Making it easier to deploy and share using notebook.link
 
-![float-right w:250 Hero astronaut image](https://raw.githubusercontent.com/notebook-link/notebook.link//main/assets/hero-astro.svg)
-
 https://notebook.link is a web platform built on top of JupyterLite
+
+![float-right w:350 Hero astronaut image](https://raw.githubusercontent.com/notebook-link/notebook.link//main/assets/hero-astro.svg)
 
 - Deployment is trivial, almost single-click
 - Very fast to start a kernel
@@ -489,14 +510,22 @@ https://notebook.link is a web platform built on top of JupyterLite
 
 ---
 
-# Where JupyterLite is going
+# Where JupyterLite is going :fire:
 
 - Make JupyterLite experience as close to JupyterLab as possible
 - Combining with JupyterLab codebase
 - Hybrid JupyterLab/JupyterLite supporting local (JupyterLite in browser) and remote (JupyterLab) kernels
 - More kernel languages, including compiled languages
-- Missing Emscripten-forge packages
+- More Emscripten-forge packages
 
 ---
 
-# Summary/conclusions
+# Thanks :pray:
+
+![float-right height:350 qr code for slides](https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/qr.png)
+
+Thanks to all the contributors of JupyterLite, Xeus, Emscripten-forge, and Pyodide!
+
+- Presentation repository: https://github.com/ianthomas23/pydata-london-2026-jupyterlite
+
+- Live version: https://ianthomas23.github.io/pydata-london-2026-jupyterlite/

@@ -5,5 +5,5 @@ channels:
 dependencies:
   - xeus-cpp
   - xeus-python
-  - ipympl
   - matplotlib
+  - ipympl
