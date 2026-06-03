@@ -351,13 +351,22 @@ Install packages at runtime | `%pip install` | `mamba install`
 
 - Try it out at https://jupyterlite.github.io/ai/lab/index.html
 - Set up a provider using API key
-- Video walkthroughs:
-    - [Agent creating and running notebook](https://github.com/user-attachments/assets/e33d7d84-53ca-4835-a034-b6757476c98b)
-    - [Running shell commands](../images/jupyterlite-terminal-commands-demo.mp4)
 - Sandboxed
     - API key stored in your browser
     - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
 - Project name changing
+- Video walkthroughs:
+    - [Agent creating and running notebook](https://github.com/user-attachments/assets/e33d7d84-53ca-4835-a034-b6757476c98b)
+    - Running shell commands: see next slide
+
+---
+
+<video
+  controls
+  width="100%"
+  height="600px"
+  src="https://raw.githubusercontent.com/ianthomas23/pydata-london-2026-jupyterlite/main/images/jupyterlite-terminal-commands-demo.mp4">
+</video>
 
 ---
 
