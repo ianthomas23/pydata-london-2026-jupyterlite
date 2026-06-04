@@ -6,4 +6,3 @@ dependencies:
   - xeus-octave
   - xeus-python
   - matplotlib
-  #- ipympl

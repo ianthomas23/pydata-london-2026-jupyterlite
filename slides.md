@@ -88,12 +88,12 @@ France, Austria, Germany, India, Spain, UK
 
 # Talk outline
 
-- What is JupyterLite?
-- Various demonstrations
-- How it works
-- What it is good and bad at
-- How to deploy a JupyterLite web site
-- Where it is going
+* What is JupyterLite?
+* Various demonstrations
+* How it works
+* What it is good and bad at
+* How to deploy a JupyterLite web site
+* Where it is going
 
 ---
 
@@ -101,20 +101,20 @@ France, Austria, Germany, India, Spain, UK
 
 # What is JupyterLite?
 
-- JupyterLite is a JupyterLab distribution that runs entirely in the web browser, backed by in-browser language kernels
-- Like JupyterLab but **everything** runs in your web browser
+* JupyterLite is a JupyterLab distribution that runs entirely in the web browser, backed by in-browser language kernels
+* Like JupyterLab but **everything** runs in your web browser
 
 ---
 
 # Live demonstration
 
-- https://jupyter.org/ :arrow_right: Try it in your browser :arrow_right: JupyterLab
-- This is JupyterLite not JupyterLab
-- Intro: running Python code
-- Lorenz: interactive visualisation using `matplotlib` and `ipywidgets`
-- Other kernels: R, C++, Sqlite
-- `platform.machine()` is `wasm32`
-- Shared filesystem
+* https://jupyter.org/ :arrow_right: Try it in your browser :arrow_right: JupyterLab
+* This is JupyterLite not JupyterLab
+* Intro: running Python code
+* Lorenz: interactive visualisation using `matplotlib` and `ipywidgets`
+* Other kernels: R, C++, Sqlite
+* `platform.machine()` is `wasm32`
+* Shared filesystem
 
 ---
 
@@ -136,22 +136,22 @@ France, Austria, Germany, India, Spain, UK
 
 # Why JupyterLite vs JupyterLab?
 
-- Static web site
+* Static web site
     - Easy to deploy
     - Scales well
-- Example of tutorial for the audience
-- [Capytale project](https://thenewstack.io/teaching-a-billion-people-to-code-how-jupyterlite-is-scaling-the-impossible/)
+* Example of tutorial for the audience
+* [Capytale project](https://thenewstack.io/teaching-a-billion-people-to-code-how-jupyterlite-is-scaling-the-impossible/)
     - 500,000 high school students in France on single server
 
 ---
 
 # How it works 1
 
-- Frontend (UI in browser) almost the same as JupyterLab
-- Jupyter server also runs in the browser, is JavaScript instead of Python
+* Frontend (UI in browser) almost the same as JupyterLab
+* Jupyter server also runs in the browser, is JavaScript instead of Python
     - Create and delete kernels
     - Communication to and from kernels via Jupyter messaging protocol
-- Kernels also run in the browser
+* Kernels also run in the browser
     - Each in its own thread (Web Worker)
     - Python kernel is CPython compiled to WebAssembly using Emscripten
 
@@ -159,11 +159,11 @@ France, Austria, Germany, India, Spain, UK
 
 # How it works 2: what is Python?
 
-- Python is an executable that runs on your Operating System
-- CPython is C source code compiled into an executable
+* Python is an executable that runs on your Operating System
+* CPython is C source code compiled into an executable
     - e.g. using the `clang` toolchain to compile for `macOS ARM`
-- Pass it Python code (human-readable text) that it parses, interprets and executes
-- Use other Python packages:
+* Pass it Python code (human-readable text) that it parses, interprets and executes
+* Use other Python packages:
     - Pure Python packages (`noarch`) are also text
     - Packages containing compiled code (e.g. `numpy`) must be pre-compiled to your architecture
 
@@ -171,14 +171,14 @@ France, Austria, Germany, India, Spain, UK
 
 # How it works 3: Python in the browser
 
-- WebAssembly (`wasm`) is a executable format that runs in the browser
+* WebAssembly (`wasm`) is a executable format that runs in the browser
     - This is our architecture/platform
-- Emscripten is a toolchain used to compile to WebAssembly
-- We use the Emscripten toolchain to compile CPython to WebAssembly
-- Pass it Python code as usual
+* Emscripten is a toolchain used to compile to WebAssembly
+* We use the Emscripten toolchain to compile CPython to WebAssembly
+* Pass it Python code as usual
     - Pure Python packages (`noarch`) can be used unmodified
     - Packages containing compiled code must be pre-compiled to WebAssembly
-- Packages for kernels are downloaded and cached in your browser
+* Packages for kernels are downloaded and cached in your browser
 
 ---
 
@@ -206,21 +206,19 @@ France, Austria, Germany, India, Spain, UK
 </div>
 </div>
 
-More in progress ...
+<div class="centre">More in progress ...</div>
 
 ---
 
 # There are two Python kernels :anguished:
 
-- `pyodide`
+* `pyodide`
     - Used outside of JupyterLite in web apps and web pages, including in PyScript
     - Wrapped to understand Jupyter messaging protocol as `pyodide-kernel`
-
-- `xeus-python`
+* `xeus-python`
     - One of the xeus family of kernels, for use in JupyterLite only
-
-- Developed in parallel by different teams
-- Differ in how they are designed, and how they are packaged
+* Developed in parallel by different teams
+* Differ in how they are designed, and how they are packaged
 
 ---
 
@@ -254,6 +252,7 @@ Packaging tool | `pip`-based | `conda`-based
 - Mostly you can use either
 - Switch between them easily using JupyterLite UI
 - Often different versions of packages available
+- Demo on [try-jupyter](https://jupyter.org/try-jupyter/lab/) :rocket:
 
 &nbsp; | pyodide | xeus
 --- | ---- | ----
@@ -268,41 +267,41 @@ Install packages at runtime | `%pip install` | `mamba install`
 
 # Emscripten-forge packages
 
-- xeus-based wasm packages are built on Emscripten-forge
+* xeus-based wasm packages are built on Emscripten-forge
     - Conda-forge does not support `emscripten-wasm32` platform
     - Emscripten-forge is conda-forge for WebAssembly
-- Install such packages using `mamba` or `pixi`
+* Install such packages using `mamba` or `pixi`
     - `conda` does not support `emscripten-wasm32` platform
-- Recipes at https://github.com/emscripten-forge/recipes
-- Served from `prefix.dev` channel https://prefix.dev/channels/emscripten-forge-4x
+* Recipes at https://github.com/emscripten-forge/recipes
+* Served from `prefix.dev` channel https://prefix.dev/channels/emscripten-forge-4x
 
 ---
 
 # Key features of JupyterLite
 
-- Static web site
+* Static web site
     - Easy to deploy
     - Scales well
-- Browser local storage
+* Browser local storage
     - Shared between the different kernels
     - Changes only visible to you
     - When you return to the same site using the same browser you see your changes
     - Files that are served in the deployment can be modified and saved locally
         - If deleted, revert to the served files
-- Real Time Collaboration = work in progress
+* Real Time Collaboration = work in progress
 
 ---
 
 # Other interesting demos
 
-- Installing packages on the fly
+* Installing packages on the fly
     - `mamba install`, `list`, `remove` for xeus kernels
     - `%pip install` for pyodide kernel
-- Compiled languages such as C++
+* Compiled languages such as C++
     - Compiler toolchain is compiled to WebAssembly
-- JupyterGIS
+* JupyterGIS
     - https://jupytergis.readthedocs.io/en/latest/lite/lab/
-- Voici dashboards
+* Voici dashboards
     - https://voici.readthedocs.io/en/latest/
 
 <!-- install bokeh for xeus, cowsay for pyodide -->
@@ -312,23 +311,23 @@ Install packages at runtime | `%pip install` | `mamba install`
 
 # What is JupyterLite good at? :heart:
 
-- Trying things out
+* Trying things out
     - Without installing an environment and packages
-- Education
+* Education
     - Students start with copy of initial files and modify them locally
-- Keeping data secure in the browser
+* Keeping data secure in the browser
     - Health data, finance
 
 ---
 
 # What is JupyterLite bad at? :broken_heart:
 
-- Does not support multithreading or multiprocessing
-- Large datasets
+* Does not support multithreading or multiprocessing
+* Large datasets
     - Data stored in the browser
-- Sharing modified files
-- Kernels only support a single version of programming language at a time
-- Remote access limited by [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) (CORS)
+* Sharing modified files
+* Kernels only support a single version of programming language at a time
+* Remote access limited by [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) (CORS)
 
 ---
 
@@ -336,26 +335,26 @@ Install packages at runtime | `%pip install` | `mamba install`
 
 ![float-right w:250 JupyterLite terminal logo](https://raw.githubusercontent.com/jupyterlite/terminal/main/docs/_static/terminal_logo.svg)
 
-- JupyterLite extension for terminal that runs in the browser
-- Connected to the `/drive` that is shared with kernels
-- Commands compiled to WebAssembly using Emscripten-forge
-- Tab to list available commands and aliases
+* JupyterLite extension for terminal that runs in the browser
+* Connected to the `/drive` that is shared with kernels
+* Commands compiled to WebAssembly using Emscripten-forge
+* Tab to list available commands and aliases
     - `ls`, `echo`, `uname`, `vim`, `nano`, `git`, etc
-- Demo https://jupyter.org/try-jupyter/lab/ :rocket:
-- Note `git clone` of remote repo is possible but requires a CORS proxy
+* Demo https://jupyter.org/try-jupyter/lab/ :rocket:
+* Note `git clone` of remote repo is possible but requires a CORS proxy
     - See https://git2cpp.readthedocs.io/ for more details
 
 ---
 
 # Useful extension: Jupyterlite AI :sparkles:
 
-- Try it out at https://jupyterlite.github.io/ai/lab/index.html
-- Set up a provider using API key
-- Sandboxed
+* Try it out at https://jupyterlite.github.io/ai/lab/index.html
+* Set up a provider using API key
+* Sandboxed
     - API key stored in your browser
     - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
-- Project name changing
-- Video walkthroughs:
+* Project name changing
+* Video walkthroughs:
     - [Agent creating and running notebook](https://github.com/user-attachments/assets/e33d7d84-53ca-4835-a034-b6757476c98b)
     - Running shell commands: see next slide
 
@@ -372,25 +371,25 @@ Install packages at runtime | `%pip install` | `mamba install`
 
 # Useful extension: jupyterlite-sphinx
 
-- Embed JupyterLite into your `sphinx` project documentation
-- jupyterlite-sphinx
+* Embed JupyterLite into your `sphinx` project documentation
+* jupyterlite-sphinx
     - https://jupyterlite-sphinx.readthedocs.io/
-- ipyleaflet
+* ipyleaflet
     - https://ipyleaflet.readthedocs.io/
-- numpy
+* numpy
     - https://numpy.org/
-- sympy
+* sympy
     - https://live.sympy.org/
 
 ---
 
 # Create a JupyterLite deployment 1
 
-- Deployment is just a static web site
-- Deploy locally or to GitHub Pages, Read the Docs, Vercel, etc
-- Official docs
+* Deployment is just a static web site
+* Deploy locally or to GitHub Pages, Read the Docs, Vercel, etc
+* Official docs
     - https://jupyterlite.readthedocs.io/en/stable/howto/index.html
-- Example deployments
+* Example deployments
     - In many https://github.com/jupyterlite repos
     - https://github.com/jupyter/try-jupyter
 
@@ -398,11 +397,11 @@ Install packages at runtime | `%pip install` | `mamba install`
 
 # Create a JupyterLite deployment 2
 
-- Questions
+* Questions
     - What packages (kernels, terminal, extensions) do you want?
     - What pre-installed xeus kernel packages do you want?
     - What content (notebooks, data files) do you want?
-- Process
+* Process
     - Build the static site using `jupyter lite build`
     - Serve it
 
@@ -455,29 +454,29 @@ python -m http.server -d _output/
 
 # Deployment extras 1
 
-- Content (notebooks, data files)
+* Content (notebooks, data files)
     - Put in a separate directory e.g. `contents`
     - `jupyter_server` must be in `build-environment.yml`
     - Append `--contents contents/` to `jupyter lite build`
 
-- Xeus kernels
+* Xeus kernels
     - Add `xeus-whatever` to `environment.yml`
     - `jupyterlite-xeus` must be in `build-environment.yml`
 
-- Non-xeus kernels such as `pyodide` and `p5`
+* Non-xeus kernels such as `pyodide` and `p5`
     - Add to `build-environment.yml`
 
 ---
 
 # Deployment extras 2
 
-- Preinstall xeus kernel packages
+* Preinstall xeus kernel packages
     - Add to `environment.yml`
 
-- Extensions such as `jupyterlite-ai`
+* Extensions such as `jupyterlite-ai`
     - Add to `build-environment.yml`
 
-- Terminal extension
+* Terminal extension
     - Add `jupyterlite-terminal` and `nodejs` to `build-environment.yml`
     - Add `jupyter-lite.json` file to enable terminals
     - Optional `cockle-config-in.json` for extra commands, etc
@@ -486,24 +485,24 @@ python -m http.server -d _output/
 
 # More complicated local deployment
 
-- Kernels = `pyodide`, `p5`, `xeus-cpp`, `xeus-python`
+* Kernels = `pyodide`, `p5`, `xeus-octave`, `xeus-python`
     - `p5` kernel not on `conda-forge` so install using `pip`
-- Content = notebook, text file
-- Extensions = terminal, catppuccin theme
-- See `deploy2` directory of this talk's github repository
-- Live demo :rocket:
-- On GitHub Pages
+* Content = notebook, text file
+* Extensions = terminal, catppuccin theme
+* See `deploy2` directory of this talk's github repository
+* Live demo :rocket:
+* On GitHub Pages
     - https://ianthomas23.github.io/pydata-london-2026-jupyterlite/deploy2
 
 ---
 
-# Deploy to github pages
+# Deploy to GitHub Pages
 
-- Demo repository https://github.com/jupyterlite/demo
-- Docs https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html
-- Use the demo repo as a template to create your own repository
-- Set up GitHub Actions and deploy
-- Follow video and screenshots in the docs site
+* Demo repository https://github.com/jupyterlite/demo
+* Docs https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html
+* Use the demo repo as a template to create your own repository
+* Set up GitHub Actions and deploy
+* Follow video and screenshots in the docs site
 
 ---
 
@@ -513,20 +512,21 @@ https://notebook.link is a web platform built on top of JupyterLite
 
 ![float-right w:350 Hero astronaut image](https://raw.githubusercontent.com/notebook-link/notebook.link//main/assets/hero-astro.svg)
 
-- Deployment is trivial, almost single-click
-- Very fast to start a kernel
-- Your files are stored in the cloud so that they can be used from multiple machines
-- Sharing of notebooks with anyone via a link
+* Deployment is trivial, almost single-click
+* Very fast to start a kernel
+* Your files are stored in the cloud so that they can be used from multiple machines
+* Sharing of notebooks with anyone via a link
 
 ---
 
 # Where JupyterLite is going :fire:
 
-- Make JupyterLite experience as close to JupyterLab as possible
-- Combining with JupyterLab codebase
-- Hybrid JupyterLab/JupyterLite supporting local (JupyterLite in browser) and remote (JupyterLab) kernels
-- More kernel languages, including compiled languages
-- More Emscripten-forge packages
+* Make JupyterLite experience as close to JupyterLab as possible
+* Combining with JupyterLab codebase
+* Hybrid JupyterLab/JupyterLite supporting local (JupyterLite in browser) and remote (JupyterLab) kernels
+* Access remote compute from within JupyterLite kernel
+* More kernel languages, including compiled languages
+* More Emscripten-forge packages
 
 ---
 
