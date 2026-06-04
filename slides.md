@@ -45,9 +45,6 @@ img[alt~="float-right"] {
 Presentation repository:
 https://github.com/ianthomas23/pydata-london-2026-jupyterlite
 
-Live version:
-https://ianthomas23.github.io/pydata-london-2026-jupyterlite/
-
 ---
 
 # About me
@@ -201,7 +198,7 @@ France, Austria, Germany, India, Spain, UK
     - Used outside of JupyterLite in web apps and web pages, including in PyScript
     - Wrapped to understand Jupyter messaging protocol as `pyodide-kernel`
 * `xeus-python`
-    - One of the xeus family of kernels, for use in JupyterLite only
+    - One of the xeus family of kernels, for use in Jupyter (Lab/Lite) only
 * Developed in parallel by different teams
 * Differ in how they are designed, and how they are packaged
 
@@ -285,8 +282,6 @@ Install packages at runtime | `%pip install` | `mamba install`
     - Compiler toolchain is compiled to WebAssembly
 * JupyterGIS
     - https://jupytergis.readthedocs.io/en/latest/lite/lab/
-* Voici dashboards
-    - https://voici.readthedocs.io/en/latest/
 
 <!-- install bokeh for xeus, cowsay for pyodide -->
 <!-- Open an existing JGIS project -->
@@ -319,19 +314,15 @@ Install packages at runtime | `%pip install` | `mamba install`
 ![float-right w:250 JupyterLite terminal logo](https://raw.githubusercontent.com/jupyterlite/terminal/main/docs/_static/terminal_logo.svg)
 
 * JupyterLite extension for terminal that runs in the browser
-* Connected to the `/drive` that is shared with kernels
 * Commands compiled to WebAssembly using Emscripten-forge
-* Tab to list available commands and aliases
-    - `ls`, `echo`, `uname`, `vim`, `nano`, `git`, etc
+* `ls`, `echo`, `uname`, `vim`, `nano`, `git`, etc
 * Demo https://jupyter.org/try-jupyter/lab/ :rocket:
-* Note `git clone` of remote repo is possible but requires a [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) proxy
-    - See https://git2cpp.readthedocs.io/ for more details
 
 ---
 
 # Useful extension: Jupyterlite AI :sparkles:
 
-* Try it out at https://jupyterlite.github.io/ai/lab/index.html
+* Understands Jupyter commands
 * Sandboxed
     - API keys stored in your browser
     - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
@@ -414,7 +405,6 @@ channels:
 dependencies:
   - xeus-python
   - matplotlib
-  - ipympl
 ```
 
 </div>
@@ -513,6 +503,4 @@ https://notebook.link is a web platform built on top of JupyterLite
 
 Thanks to all the contributors of JupyterLite, Xeus, Emscripten-forge, and Pyodide!
 
-- Presentation repository: https://github.com/ianthomas23/pydata-london-2026-jupyterlite
-
-- Live version: https://ianthomas23.github.io/pydata-london-2026-jupyterlite/
+Presentation repository: https://github.com/ianthomas23/pydata-london-2026-jupyterlite
