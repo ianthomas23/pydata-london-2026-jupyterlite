@@ -1,4 +1,4 @@
-# More complicated deployment with content, terminal, jupyterlite-ai, etc
+# More complicated deployment with content, terminal, theme extension, etc
 
 Assumes have `micromamba` installed.
 

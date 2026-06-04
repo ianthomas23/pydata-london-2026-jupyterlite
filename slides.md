@@ -84,19 +84,6 @@ France, Austria, Germany, India, Spain, UK
 
 ---
 
-![float-right w:450 JupyterLite logo](https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/icon.svg)
-
-# Talk outline
-
-* What is JupyterLite?
-* Various demonstrations
-* How it works
-* What it is good and bad at
-* How to deploy a JupyterLite web site
-* Where it is going
-
----
-
 ![float-right w:250 JupyterLite logo](https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/icon.svg)
 
 # What is JupyterLite?
@@ -109,11 +96,10 @@ France, Austria, Germany, India, Spain, UK
 # Live demonstration
 
 * https://jupyter.org/ :arrow_right: Try it in your browser :arrow_right: JupyterLab
-* This is JupyterLite not JupyterLab
-* Intro: running Python code
-* Lorenz: interactive visualisation using `matplotlib` and `ipywidgets`
-* Other kernels: R, C++, Sqlite
+* JupyterLite not JupyterLab
+* Run Python code
 * `platform.machine()` is `wasm32`
+* Other kernels: R, C++, Sqlite
 * Shared filesystem
 
 ---
@@ -139,7 +125,7 @@ France, Austria, Germany, India, Spain, UK
 * Static web site
     - Easy to deploy
     - Scales well
-* Example of tutorial for the audience
+* Consider resources needed for tutorial for ~100 people
 * [Capytale project](https://thenewstack.io/teaching-a-billion-people-to-code-how-jupyterlite-is-scaling-the-impossible/)
     - 500,000 high school students in France on single server
 
@@ -178,7 +164,6 @@ France, Austria, Germany, India, Spain, UK
 * Pass it Python code as usual
     - Pure Python packages (`noarch`) can be used unmodified
     - Packages containing compiled code must be pre-compiled to WebAssembly
-* Packages for kernels are downloaded and cached in your browser
 
 ---
 
@@ -288,7 +273,6 @@ Install packages at runtime | `%pip install` | `mamba install`
     - When you return to the same site using the same browser you see your changes
     - Files that are served in the deployment can be modified and saved locally
         - If deleted, revert to the served files
-* Real Time Collaboration = work in progress
 
 ---
 
@@ -327,7 +311,6 @@ Install packages at runtime | `%pip install` | `mamba install`
     - Data stored in the browser
 * Sharing modified files
 * Kernels only support a single version of programming language at a time
-* Remote access limited by [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) (CORS)
 
 ---
 
@@ -341,7 +324,7 @@ Install packages at runtime | `%pip install` | `mamba install`
 * Tab to list available commands and aliases
     - `ls`, `echo`, `uname`, `vim`, `nano`, `git`, etc
 * Demo https://jupyter.org/try-jupyter/lab/ :rocket:
-* Note `git clone` of remote repo is possible but requires a CORS proxy
+* Note `git clone` of remote repo is possible but requires a [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) proxy
     - See https://git2cpp.readthedocs.io/ for more details
 
 ---
@@ -349,9 +332,8 @@ Install packages at runtime | `%pip install` | `mamba install`
 # Useful extension: Jupyterlite AI :sparkles:
 
 * Try it out at https://jupyterlite.github.io/ai/lab/index.html
-* Set up a provider using API key
 * Sandboxed
-    - API key stored in your browser
+    - API keys stored in your browser
     - Safe way to try out a provider without giving it access to your operating system, hard drive, and environment variables
 * Project name changing
 * Video walkthroughs:
@@ -372,14 +354,11 @@ Install packages at runtime | `%pip install` | `mamba install`
 # Useful extension: jupyterlite-sphinx
 
 * Embed JupyterLite into your `sphinx` project documentation
-* jupyterlite-sphinx
-    - https://jupyterlite-sphinx.readthedocs.io/
-* ipyleaflet
-    - https://ipyleaflet.readthedocs.io/
-* numpy
-    - https://numpy.org/
-* sympy
-    - https://live.sympy.org/
+* Examples
+    - jupyterlite-sphinx: https://jupyterlite-sphinx.readthedocs.io/
+    - ipyleaflet: https://ipyleaflet.readthedocs.io/
+    - numpy: https://numpy.org/
+    - sympy: https://live.sympy.org/
 
 ---
 
@@ -485,21 +464,20 @@ python -m http.server -d _output/
 
 # More complicated local deployment
 
+* See `deploy2` directory of this talk's github repository
 * Kernels = `pyodide`, `p5`, `xeus-octave`, `xeus-python`
     - `p5` kernel not on `conda-forge` so install using `pip`
 * Content = notebook, text file
 * Extensions = terminal, catppuccin theme
-* See `deploy2` directory of this talk's github repository
-* Live demo :rocket:
-* On GitHub Pages
+* Live demo on GitHub Pages
     - https://ianthomas23.github.io/pydata-london-2026-jupyterlite/deploy2
 
 ---
 
 # Deploy to GitHub Pages
 
+* Official docs https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html
 * Demo repository https://github.com/jupyterlite/demo
-* Docs https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html
 * Use the demo repo as a template to create your own repository
 * Set up GitHub Actions and deploy
 * Follow video and screenshots in the docs site
@@ -522,7 +500,6 @@ https://notebook.link is a web platform built on top of JupyterLite
 # Where JupyterLite is going :fire:
 
 * Make JupyterLite experience as close to JupyterLab as possible
-* Combining with JupyterLab codebase
 * Hybrid JupyterLab/JupyterLite supporting local (JupyterLite in browser) and remote (JupyterLab) kernels
 * Access remote compute from within JupyterLite kernel
 * More kernel languages, including compiled languages
